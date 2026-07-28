@@ -1,14 +1,14 @@
-# The Turquoise Dot — website
+# The Turquoise Dot website
 
 Landing page for **The Turquoise Dot**, Singapore's Turkish and Turkic tech and research community.
 Live at: https://theturquoisedot.github.io/ (custom domain `turquoisedot.sg` planned).
 
 ## How this site works
 
-- Plain static HTML — **no build system, no dependencies**. GitHub Pages serves `index.html` directly.
+- Plain static HTML with **no build system and no dependencies**. GitHub Pages serves `index.html` directly.
 - Everything lives in two places:
-  - `index.html` — all content and styling (CSS is embedded in the `<style>` block).
-  - `assets/` — hero image, social-share image (`og-image.jpg`), favicon.
+  - `index.html`: all content and styling (CSS is embedded in the `<style>` block).
+  - `assets/`: hero image, social-share image (`og-image.jpg`), favicon.
 - `.nojekyll` tells GitHub Pages to skip the Jekyll build. Keep it.
 
 ## Common edits (for future officers)
