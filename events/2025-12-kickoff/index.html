@@ -17,6 +17,10 @@
 <meta name="twitter:site" content="@theturquoisedot">
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14181B">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,9 +43,75 @@
   "location": {
     "@type": "Place",
     "name": "SMU Connexion, Level 4 Event Space, Institute of Innovation and Entrepreneurship",
-    "address": { "@type": "PostalAddress", "streetAddress": "40 Stamford Road", "postalCode": "178908", "addressCountry": "SG" }
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "40 Stamford Road",
+      "postalCode": "178908",
+      "addressCountry": "SG"
+    }
   },
-  "organizer": { "@type": "Organization", "name": "The Turquoise Dot", "url": "https://turquoisedot.org/" }
+  "organizer": {
+    "@type": "Organization",
+    "name": "The Turquoise Dot",
+    "url": "https://turquoisedot.org/",
+    "@id": "https://turquoisedot.org/#organization"
+  },
+  "performer": [
+    {
+      "@type": "Person",
+      "name": "Selman Kurt",
+      "jobTitle": "Senior Research Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Dyson"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Furkan Ilaslan",
+      "jobTitle": "PhD Candidate",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "National University of Singapore"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Burak Satar",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Research Scientist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Singapore Management University"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://turquoisedot.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Events",
+      "item": "https://turquoisedot.org/events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Community Kickoff and Insights from GRIP",
+      "item": "https://turquoisedot.org/events/2025-12-kickoff/"
+    }
+  ]
 }
 </script>
 </head>
@@ -61,6 +131,8 @@
     </div>
   </div>
 </nav>
+
+<main>
 
 <header class="page-head">
   <div class="wrap">
@@ -152,6 +224,7 @@
       <figure><img src="/assets/events/2025-12-kickoff/08.webp" alt="Full room at SMU Connexion with the talk on screen" loading="lazy"></figure>
       <figure><img src="/assets/events/2025-12-kickoff/09.webp" alt="Baklava and networking after the talks" loading="lazy"></figure>
     </div>
+    <p class="gallery-note">Photos from a public community event. If you appear in one and would rather not, write to <a href="mailto:turquoisedotsg@gmail.com">turquoisedotsg@gmail.com</a> and we will take it down.</p>
   </div>
 </section>
 
@@ -165,6 +238,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap foot">
     <div>© 2026 The Turquoise Dot · Singapore</div>
@@ -175,6 +250,7 @@
       <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
       <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
       <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+      <a href="/privacy/">Privacy</a>
     </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>
   </div>

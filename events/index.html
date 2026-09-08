@@ -17,11 +17,35 @@
 <meta name="twitter:site" content="@theturquoisedot">
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14181B">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://turquoisedot.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Events",
+      "item": "https://turquoisedot.org/events/"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -40,6 +64,8 @@
   </div>
 </nav>
 
+<main>
+
 <header class="page-head">
   <div class="wrap">
     <p class="crumbs"><a href="/">Home</a> / Events</p>
@@ -55,7 +81,7 @@
       <!-- EVENT CARDS: newest first on this page. Each card links to its page in this folder. -->
       <div class="event reveal" data-until="2026-09-23T20:30:00+08:00" data-past="chip">
         <span class="chip next">Event #3 · 23 Sep 2026</span>
-        <h3><a href="/events/2026-09-robotics-and-embodied-ai/">Robotics and Embodied AI</a></h3>
+        <h2><a href="/events/2026-09-robotics-and-embodied-ai/">Robotics and Embodied AI</a></h2>
         <p class="meta">Infuse Theatre, Fusionopolis · venue hosted by A*STAR</p>
         <p>Embodied intelligence, from research bench to factory floor, with Dr Cihan Acar (A*STAR), Garen Haddeler (dConstruct Robotics), and Altar Koca (OmniVision).</p>
         <div class="links">
@@ -65,14 +91,14 @@
       </div>
       <div class="event reveal">
         <span class="chip">Event #2 · 14 May 2026</span>
-        <h3><a href="/events/2026-05-cybersecurity-and-ai/">Cybersecurity and AI</a></h3>
+        <h2><a href="/events/2026-05-cybersecurity-and-ai/">Cybersecurity and AI</a></h2>
         <p class="meta">Illinois ARCS, CREATE Tower</p>
         <p>One threat, two perspectives: academia and industry in the same room, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore.</p>
         <div class="links"><a href="/events/2026-05-cybersecurity-and-ai/">Recap and photos →</a><a href="/events/2026-05-cybersecurity-and-ai/#watch">Watch the Ambassador's remarks ▶</a></div>
       </div>
       <div class="event reveal">
         <span class="chip">Event #1 · 12 Dec 2025</span>
-        <h3><a href="/events/2025-12-kickoff/">Community Kickoff and Insights from GRIP</a></h3>
+        <h2><a href="/events/2025-12-kickoff/">Community Kickoff and Insights from GRIP</a></h2>
         <p class="meta">SMU Connexion · hosted by SMU Institute of Innovation &amp; Entrepreneurship</p>
         <p>A sold-out first evening: a Dyson engineer's wearable-device field notes, a MedTech project on dementia, and the community's plans for 2026.</p>
         <div class="links"><a href="/events/2025-12-kickoff/">Recap and photos →</a></div>
@@ -80,6 +106,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap foot">
@@ -91,6 +119,7 @@
       <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
       <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
       <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+      <a href="/privacy/">Privacy</a>
     </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>
   </div>

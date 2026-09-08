@@ -17,6 +17,10 @@
 <meta name="twitter:site" content="@theturquoisedot">
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14181B">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +31,102 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://turquoisedot.org/#organization",
   "name": "The Turquoise Dot",
-  "description": "Singapore's Turkish and Turkic tech and research community",
+  "alternateName": [
+    "Turquoise Dot",
+    "TurquoiseDot"
+  ],
+  "description": "Singapore's Turkish and Turkic tech and research community: quarterly deep-tech events at rotating venues across Singapore, bridging Türkiye and Singapore. Founded in Singapore in December 2025.",
   "url": "https://turquoisedot.org/",
-  "logo": "https://turquoisedot.org/assets/og-image.jpg",
+  "logo": "https://turquoisedot.org/assets/icon-512.png",
+  "image": "https://turquoisedot.org/assets/og-image.jpg",
   "email": "turquoisedotsg@gmail.com",
-  "foundingDate": "2025",
+  "foundingDate": "2025-12",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Singapore"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    {
+      "@type": "Country",
+      "name": "Türkiye"
+    }
+  ],
+  "knowsAbout": [
+    "deep tech",
+    "artificial intelligence",
+    "robotics",
+    "embodied AI",
+    "cybersecurity",
+    "MedTech",
+    "wearables",
+    "research and startup ecosystems in Singapore and Türkiye"
+  ],
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Burak Satar",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Research Scientist",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Singapore Management University"
+      },
+      "sameAs": "https://www.linkedin.com/in/buraksatar"
+    },
+    {
+      "@type": "Person",
+      "name": "Ertem Esiner",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Research Lead",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Illinois ARCS"
+      },
+      "sameAs": "https://www.linkedin.com/in/esiner"
+    }
+  ],
+  "member": [
+    {
+      "@type": "Person",
+      "name": "Burak Satar",
+      "sameAs": "https://www.linkedin.com/in/buraksatar"
+    },
+    {
+      "@type": "Person",
+      "name": "Ertem Esiner",
+      "sameAs": "https://www.linkedin.com/in/esiner"
+    },
+    {
+      "@type": "Person",
+      "name": "Pınar Bilgin",
+      "jobTitle": "CTO",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "My Audit Companion (MAuC)"
+      },
+      "sameAs": "https://www.linkedin.com/in/pinar-bilgin-b4729468"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "turquoisedotsg@gmail.com",
+    "contactType": "general enquiries",
+    "availableLanguage": [
+      "English",
+      "Turkish"
+    ]
+  },
   "sameAs": [
     "https://www.linkedin.com/company/turquoisedot",
     "https://x.com/theturquoisedot",
-    "https://luma.com/TurquoiseDot"
+    "https://luma.com/TurquoiseDot",
+    "https://github.com/theturquoisedot"
   ]
 }
 </script>
@@ -44,7 +134,7 @@
 <body>
 
 <!-- ANNOUNCEMENT BAR: hides itself after data-until. EDIT: text, link, and data-until for each new event. -->
-<div class="annc" data-until="2026-09-23T20:30:00+08:00">
+<div class="annc" role="region" aria-label="Next event" data-until="2026-09-23T20:30:00+08:00">
   <div class="wrap">
     <span class="pulse" aria-hidden="true"></span>
     <b>Next event: Robotics and Embodied AI</b>
@@ -67,6 +157,8 @@
     </div>
   </div>
 </nav>
+
+<main>
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
@@ -322,6 +414,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap foot">
     <div>© 2026 The Turquoise Dot · Singapore</div>
@@ -332,6 +426,7 @@
       <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
       <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
       <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+      <a href="/privacy/">Privacy</a>
     </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>
   </div>

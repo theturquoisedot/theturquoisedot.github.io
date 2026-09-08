@@ -1,4 +1,15 @@
+# The Turquoise Dot. Everything on this site is public; search engines and AI assistants are welcome.
 User-agent: *
+Allow: /
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://turquoisedot.org/sitemap.xml

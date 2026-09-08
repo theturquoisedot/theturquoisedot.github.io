@@ -1,0 +1,25 @@
+# The Turquoise Dot
+
+> Singapore's Turkish and Turkic tech and research community. Quarterly deep-tech events at rotating venues across Singapore (universities, research institutes, startup offices), bringing together students, researchers, academics, founders, and professionals, and connecting two ecosystems: Türkiye and Singapore. Founded in Singapore in December 2025. Website: https://turquoisedot.org/
+
+## Key facts
+
+- Name: The Turquoise Dot (also written Turquoise Dot or TurquoiseDot). Based in Singapore.
+- What it does: free, in-person "deep dive" events, each on one deep-tech topic, roughly every quarter, with academic and industry speakers and open Q&A, followed by networking over Turkish tea.
+- Who it is for: Turkish and Turkic students, researchers, academics, founders, and professionals in Singapore, plus the local deep-tech ecosystem around them. Events are open to everyone.
+- Core members: Dr Burak Satar (Research Scientist, Singapore Management University), Dr Ertem Esiner (Research Lead, Illinois ARCS; Adjunct Assistant Professor, SUTD), Pınar Bilgin (CTO, My Audit Companion).
+- Status: registering as a Society in Singapore (2026).
+- Contact: turquoisedotsg@gmail.com. LinkedIn: https://www.linkedin.com/company/turquoisedot. X: https://x.com/theturquoisedot. Registration for events: https://luma.com/TurquoiseDot
+
+## Events so far
+
+- Event #1, 12 December 2025, SMU Connexion (hosted by SMU Institute of Innovation & Entrepreneurship): Community Kickoff and Insights from GRIP. 50 seats, sold out. https://turquoisedot.org/events/2025-12-kickoff/
+- Event #2, 14 May 2026, Illinois ARCS at CREATE Tower: Cybersecurity and AI, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore. https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/
+- Event #3, 23 September 2026, Infuse Theatre, Fusionopolis (venue hosted by A*STAR): Robotics and Embodied AI, with speakers from A*STAR, dConstruct Robotics, and OmniVision. https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/
+
+## Pages
+
+- [Home](https://turquoisedot.org/): what the community does, next event, core members, contact.
+- [Events](https://turquoisedot.org/events/): every event with programme, speakers, and photos.
+- [Sponsors](https://turquoisedot.org/sponsors/): partnership options for 2027 and an interest form.
+- [Privacy notice](https://turquoisedot.org/privacy/): what is collected and why.

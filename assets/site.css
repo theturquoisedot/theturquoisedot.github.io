@@ -108,6 +108,7 @@ nav{
 .crumbs a{color:var(--muted)}
 .crumbs a:hover{color:var(--turq-bright)}
 .page-head h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:700;margin:10px 0 16px}
+.page-head h1 .dot{color:var(--red)}
 .page-head .lede{margin-bottom:22px}
 .meta-list{display:flex;flex-wrap:wrap;gap:10px 26px;color:var(--muted);font-size:.93rem;margin-bottom:22px}
 .meta-list b{color:var(--ink);font-weight:600}
@@ -194,9 +195,9 @@ section{padding:76px 0}
   padding:4px 10px;border-radius:999px;
 }
 .chip.next{color:var(--red);background:rgba(232,110,99,.08);border-color:rgba(232,110,99,.3)}
-.event h3{font-size:1.12rem}
-.event h3 a{color:var(--ink)}
-.event h3 a:hover{color:var(--turq-bright)}
+.event h3,.event h2{font-size:1.12rem;font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15}
+.event h3 a,.event h2 a{color:var(--ink)}
+.event h3 a:hover,.event h2 a:hover{color:var(--turq-bright)}
 .event .meta{color:var(--muted);font-size:.85rem}
 .event p{color:var(--muted);font-size:.93rem;flex-grow:1}
 .event .links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;font-weight:600}
@@ -204,6 +205,9 @@ section{padding:76px 0}
 /* ---------- event page ---------- */
 .two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
 .prose p{color:var(--muted);margin-bottom:14px}
+.prose h2{font-size:1.25rem;margin:30px 0 10px}
+.prose h2:first-child{margin-top:0}
+.lede a,.prose a,.sec-head p a,.fineprint a,.partners-line a,.team-note a,.gallery-note a,.contact-card p a,.watch-wrap p a,.poster-wrap p a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(64,232,220,.45)}
 .prose p strong{color:var(--ink)}
 .programme{list-style:none;border-left:1px solid var(--line-turq);margin-left:6px}
 .programme li{position:relative;padding:0 0 16px 22px;font-size:.93rem;color:var(--muted)}

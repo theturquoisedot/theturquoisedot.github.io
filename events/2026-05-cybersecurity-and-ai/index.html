@@ -17,6 +17,10 @@
 <meta name="twitter:site" content="@theturquoisedot">
 
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14181B">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,9 +43,82 @@
   "location": {
     "@type": "Place",
     "name": "Illinois ARCS, Level 2, CREATE Tower",
-    "address": { "@type": "PostalAddress", "streetAddress": "1 Create Way", "postalCode": "138602", "addressCountry": "SG" }
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Create Way",
+      "postalCode": "138602",
+      "addressCountry": "SG"
+    }
   },
-  "organizer": { "@type": "Organization", "name": "The Turquoise Dot", "url": "https://turquoisedot.org/" }
+  "organizer": {
+    "@type": "Organization",
+    "name": "The Turquoise Dot",
+    "url": "https://turquoisedot.org/",
+    "@id": "https://turquoisedot.org/#organization"
+  },
+  "performer": [
+    {
+      "@type": "Person",
+      "name": "Ertem Esiner",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Research Lead",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Illinois ARCS"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Xenia R. Santos",
+      "honorificPrefix": "Dr",
+      "jobTitle": "Postdoctoral Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Illinois ARCS"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Selcuk Beyhan",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tosba Tech"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Sadık Arslan",
+      "honorificPrefix": "H.E.",
+      "jobTitle": "Ambassador of Türkiye to Singapore"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://turquoisedot.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Events",
+      "item": "https://turquoisedot.org/events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cybersecurity and AI",
+      "item": "https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/"
+    }
+  ]
 }
 </script>
 </head>
@@ -61,6 +138,8 @@
     </div>
   </div>
 </nav>
+
+<main>
 
 <header class="page-head">
   <div class="wrap">
@@ -173,6 +252,7 @@
       <figure><img src="/assets/events/2026-05-cybersecurity-and-ai/09.webp" alt="Audience in the CREATE Tower auditorium" loading="lazy"></figure>
       <figure><img src="/assets/events/2026-05-cybersecurity-and-ai/10.webp" alt="Speaker at the lectern with the audience settling in" loading="lazy"></figure>
     </div>
+    <p class="gallery-note">Photos from a public community event. If you appear in one and would rather not, write to <a href="mailto:turquoisedotsg@gmail.com">turquoisedotsg@gmail.com</a> and we will take it down.</p>
   </div>
 </section>
 
@@ -186,6 +266,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap foot">
     <div>© 2026 The Turquoise Dot · Singapore</div>
@@ -196,6 +278,7 @@
       <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
       <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
       <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+      <a href="/privacy/">Privacy</a>
     </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>
   </div>

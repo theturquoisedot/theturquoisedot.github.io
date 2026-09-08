@@ -17,7 +17,10 @@ events/index.html                           list of all events
 events/YYYY-MM-slug/index.html              one page per event
 assets/site.css, assets/site.js             shared styling and behaviour
 assets/events/YYYY-MM-slug/*.webp           event photos (optional)
-sitemap.xml, robots.txt, CNAME, .nojekyll   keep as they are
+privacy/index.html                          privacy notice (PDPA); update it once the Society is registered
+404.html                                    branded not-found page
+llms.txt                                    plain-text summary of the community for AI assistants; update with each event
+sitemap.xml, robots.txt, site.webmanifest, CNAME, .nojekyll   keep as they are
 ```
 
 ## Common edits (for future officers)
@@ -28,10 +31,12 @@ sitemap.xml, robots.txt, CNAME, .nojekyll   keep as they are
 - **Add a short video to an event page:** encode it as MP4 (H.264, under about 3 MB, `-movflags +faststart`) with a poster JPG, put both in `assets/events/YYYY-MM-slug/`, and copy the `WATCH` section from `events/2026-05-cybersecurity-and-ai/index.html`. No YouTube embed is needed for clips this short.
 - **Sponsorship form:** the page uses a Google Form owned by the community Google account. Paste the form's embed URL into `data-form-src` in `sponsors/index.html` (Google Forms: Send, then the `<>` tab, the value inside `src="..."`). While it is empty the page shows an email fallback.
 - **Latest posts:** the `LATEST POSTS` section in `index.html` has two parts. The newest LinkedIn post goes in as an official embed: open the post on LinkedIn, choose "Embed this post", and paste the `<iframe>` inside the `li-embed` div. The cards below come from `assets/posts.js`: add the newest at the top, remove the oldest, keep 3 to 6. The section hides itself while both are empty.
+- **After each event:** add the event to `llms.txt` (one line), add the new page to `sitemap.xml`, and add the photo-removal note under the gallery (copy it from an existing event page).
 - **Update stats:** edit the `<div class="stat">` blocks in `index.html` and the `reach` block in `sponsors/index.html`.
 - **Change the contact email:** search for `turquoisedotsg@gmail.com` across all pages (it appears in the JSON-LD too). Prefer a role address on the domain (for example `hello@turquoisedot.org` forwarding to the community inbox) once email forwarding is set up.
 - **Team:** edit the `TEAM CARDS` block in `index.html`. Professional role line and LinkedIn only; no personal emails.
 - **Analytics:** create a free GoatCounter site under the community Google account and put its code in `TD_GOATCOUNTER_CODE` at the top of `assets/site.js`. Leave it empty to disable.
+- **Structured data:** each page carries JSON-LD (Organization on the landing page, Event plus speakers on event pages, BreadcrumbList on sub-pages). When the core team changes, update the `member` list in `index.html`; when speakers are added, update `performer` on the event page. Test with Google's Rich Results Test after changes.
 - **Custom domain:** `turquoisedot.org` is set via the `CNAME` file (do not delete it). DNS lives in the GoDaddy account: four A records on the apex pointing to GitHub Pages IPs, plus a `www` CNAME to `theturquoisedot.github.io`. Keep "Enforce HTTPS" ticked in the repo's Pages settings. If the domain ever moves, update `CNAME`, `sitemap.xml`, `robots.txt`, and every `canonical`, `og:url`, and `og:image` URL.
 
 ## Conventions
