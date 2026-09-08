@@ -14,12 +14,14 @@
 <meta property="og:url" content="https://turquoisedot.org/">
 <meta property="og:image" content="https://turquoisedot.org/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@theturquoisedot">
 
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 
 <script type="application/ld+json">
 {
@@ -29,207 +31,37 @@
   "description": "Singapore's Turkish and Turkic tech and research community",
   "url": "https://turquoisedot.org/",
   "logo": "https://turquoisedot.org/assets/og-image.jpg",
-  "email": "buraks@smu.edu.sg",
+  "email": "turquoisedotsg@gmail.com",
   "foundingDate": "2025",
   "sameAs": [
     "https://www.linkedin.com/company/turquoisedot",
+    "https://x.com/theturquoisedot",
     "https://luma.com/TurquoiseDot"
   ]
 }
 </script>
-
-<style>
-:root{
-  --bg:#14181B;
-  --bg2:#171C1F;
-  --panel:#1B2126;
-  --line:rgba(255,255,255,.08);
-  --line-turq:rgba(94,240,228,.22);
-  --ink:#E9EEEF;
-  --muted:#9FB0B5;
-  --turq:#40E8DC;
-  --turq-bright:#7DFFFB;
-  --turq-dim:#2AB7AD;
-  --red:#E86E63;
-  --glow:0 0 22px rgba(94,240,228,.25);
-  --radius:14px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size:16.5px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15;letter-spacing:-.01em}
-a{color:var(--turq);text-decoration:none}
-a:hover{color:var(--turq-bright)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--turq);outline-offset:3px;border-radius:4px}
-img{max-width:100%;display:block}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-
-/* ---------- nav ---------- */
-nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(20,24,27,.82);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1100px;margin:0 auto}
-.brand{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);white-space:nowrap}
-.brand .dot{color:var(--red)}
-.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:.92rem}
-.nav-links a{color:var(--muted);font-weight:500}
-.nav-links a:hover{color:var(--turq-bright)}
-.nav-links a.cta{color:#06221F;background:var(--turq);padding:7px 14px;border-radius:999px;font-weight:600}
-.nav-links a.cta:hover{background:var(--turq-bright);box-shadow:var(--glow)}
-
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(700px 420px at 82% 30%,rgba(64,232,220,.10),transparent 60%),
-    radial-gradient(500px 320px at 8% 85%,rgba(232,110,99,.06),transparent 60%);
-}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:72px 0 64px}
-.eyebrow{
-  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--turq);margin-bottom:18px;
-}
-.hero h1{font-size:clamp(2.4rem,5.2vw,3.6rem);font-weight:700;margin-bottom:20px}
-.hero h1 .dot{color:var(--red);text-shadow:0 0 18px rgba(232,110,99,.55)}
-.lede{color:var(--muted);font-size:1.08rem;max-width:34em;margin-bottom:30px}
-.lede strong{color:var(--ink);font-weight:600}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  display:inline-block;padding:12px 22px;border-radius:999px;
-  font-weight:600;font-size:.95rem;transition:all .18s ease;
-}
-.btn-primary{background:var(--turq);color:#06221F}
-.btn-primary:hover{background:var(--turq-bright);color:#06221F;box-shadow:var(--glow);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--line-turq);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--turq);color:var(--turq-bright)}
-.hero-art{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.hero-art img{width:100%;height:auto}
-
-/* ---------- stats ---------- */
-.stats{border-bottom:1px solid var(--line);background:var(--bg2)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:8px 0}
-.stat{padding:26px 20px;border-left:1px solid var(--line)}
-.stat:first-child{border-left:none}
-.stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:700;color:var(--turq);margin-bottom:2px}
-.stat span{color:var(--muted);font-size:.88rem}
-
-/* ---------- sections ---------- */
-section{padding:76px 0}
-.sec-head{margin-bottom:40px;max-width:44em}
-.sec-head h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:12px}
-.sec-head p{color:var(--muted)}
-.kicker{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--turq-dim);display:block;margin-bottom:10px}
-
-/* ---------- what we do ---------- */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.card{
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:26px 26px 24px;transition:border-color .18s ease, transform .18s ease;
-}
-.card:hover{border-color:var(--line-turq);transform:translateY(-2px)}
-.card .ico{
-  width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
-  background:rgba(64,232,220,.08);border:1px solid var(--line-turq);margin-bottom:16px;
-}
-.card .ico svg{width:22px;height:22px;stroke:var(--turq);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:1.08rem;margin-bottom:8px}
-.card p{color:var(--muted);font-size:.94rem}
-
-/* ---------- corridor divider ---------- */
-.corridor{padding:10px 0 0;text-align:center}
-.corridor svg{width:min(520px,86%);height:auto;display:block;margin:0 auto}
-.corridor p{color:var(--muted);font-size:.86rem;letter-spacing:.06em;margin-top:2px}
-.corridor p b{color:var(--ink);font-weight:600}
-
-/* ---------- events ---------- */
-.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.event{
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:24px;display:flex;flex-direction:column;gap:10px;
-  transition:border-color .18s ease, transform .18s ease;
-}
-.event:hover{border-color:var(--line-turq);transform:translateY(-2px)}
-.chip{
-  align-self:flex-start;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--turq);background:rgba(64,232,220,.08);border:1px solid var(--line-turq);
-  padding:4px 10px;border-radius:999px;
-}
-.chip.next{color:var(--red);background:rgba(232,110,99,.08);border-color:rgba(232,110,99,.3)}
-.event h3{font-size:1.12rem}
-.event .meta{color:var(--muted);font-size:.85rem}
-.event p{color:var(--muted);font-size:.93rem;flex-grow:1}
-.event a.more{font-size:.9rem;font-weight:600}
-
-/* ---------- get involved ---------- */
-.involve{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tile{
-  border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--bg);
-  transition:border-color .18s ease;
-}
-.tile:hover{border-color:var(--line-turq)}
-.tile h3{font-size:1.05rem;margin-bottom:8px}
-.tile p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
-.tile a{font-weight:600;font-size:.92rem}
-
-/* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:34px}
-.person{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.person b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.02rem;margin-bottom:2px}
-.person span{display:block;color:var(--muted);font-size:.88rem;margin-bottom:10px}
-.person a{font-size:.92rem}
-.links-row{display:flex;gap:26px;flex-wrap:wrap;font-size:.95rem;font-weight:500}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.85rem}
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer .tag{color:var(--muted)}
-footer .tag em{color:var(--turq);font-style:normal}
-
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  .card,.event,.btn,.tile{transition:none}
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:720px){
-  .nav-links a:not(.cta){display:none}
-}
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:36px;padding:56px 0 48px}
-  .hero-art{max-width:560px}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .stat{border-left:none;border-top:1px solid var(--line)}
-  .stat:nth-child(-n+2){border-top:none}
-  .stat:nth-child(even){border-left:1px solid var(--line)}
-  .cards,.events-grid,.tiles,.contact-grid{grid-template-columns:1fr}
-  section{padding:60px 0}
-}
-</style>
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BAR: hides itself after data-until. EDIT: text, link, and data-until for each new event. -->
+<div class="annc" data-until="2026-09-23T20:30:00+08:00">
+  <div class="wrap">
+    <span class="pulse" aria-hidden="true"></span>
+    <b>Next event: Robotics and Embodied AI</b>
+    <span class="sub">Wed 23 Sep · 17:30 · Fusionopolis · free to attend</span>
+    <a href="https://luma.com/c4dyttkm" target="_blank" rel="noopener">Register on Luma ↗</a>
+  </div>
+</div>
+
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="#top">The Turquoise Dot<span class="dot">.</span></a>
-    <div class="nav-links">
+    <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
       <a href="#about">What we do</a>
       <a href="#events">Events</a>
-      <a href="#join">Get involved</a>
+      <a href="#team">Team</a>
+      <a href="/sponsors/">Sponsors</a>
       <a href="#contact">Contact</a>
       <a class="cta" href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Next event ↗</a>
     </div>
@@ -243,7 +75,7 @@ footer .tag em{color:var(--turq);font-style:normal}
       <h1>The Turquoise Dot<span class="dot">.</span></h1>
       <p class="lede">
         Quarterly <strong>deep-tech conversations</strong> at rotating venues across Singapore,
-        from wearables and MedTech to cybersecurity and AI. We bring together students,
+        from wearables and MedTech to cybersecurity, robotics, and AI. We bring together students,
         researchers, academics, founders, and professionals, connecting two nodes:
         <strong>Türkiye ↔ Singapore</strong>.
       </p>
@@ -253,11 +85,38 @@ footer .tag em{color:var(--turq);font-style:normal}
       </div>
     </div>
     <div class="hero-art">
-      <img src="assets/turquoise-dot-hero.webp" width="1064" height="661"
+      <img src="/assets/turquoise-dot-hero.webp" width="1064" height="661"
            alt="The Turquoise Dot: a pixel mosaic map of Singapore with glowing turquoise dots, above the community's neon wordmark" fetchpriority="high">
     </div>
   </div>
 </header>
+
+<!-- SPOTLIGHT: the current event. Hides itself after data-until. EDIT: everything inside for each new event. -->
+<div class="spotlight" data-until="2026-09-23T20:30:00+08:00">
+  <div class="wrap">
+    <div class="spot reveal">
+      <div>
+        <span class="chip next">Next event · 23 Sep 2026 · 17:30</span>
+        <h2>Robotics and Embodied AI</h2>
+        <p class="desc">A night where robots leave the lab: the research behind embodied AI, robots already working in the field, and the sensors that let machines see.</p>
+        <p class="venue"><b>Infuse Theatre</b>, Level 14, Connexis South Tower, Fusionopolis One, 1 Fusionopolis Way, Singapore 138632. Venue hosted by A*STAR.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://luma.com/c4dyttkm" target="_blank" rel="noopener">Register on Luma ↗</a>
+          <a class="btn btn-ghost" href="/events/2026-09-robotics-and-embodied-ai/">Programme and details →</a>
+        </div>
+        <p class="note">Free to attend. Turkish tea and light refreshments from 17:30, talks from 18:15.</p>
+      </div>
+      <div>
+        <p class="side-label">Speakers</p>
+        <ul class="speakers">
+          <li><b>Dr Cihan Acar</b><span>Senior Research Scientist, A*STAR</span><i>Main talk: the research behind embodied AI</i></li>
+          <li><b>Garen Haddeler</b><span>Robotics Engineer, dConstruct Robotics</span><i>Lightning talk: robots working in the field</i></li>
+          <li><b>Altar Koca</b><span>Design Engineer, OmniVision</span><i>Main talk: the sensors that let machines see</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="stats">
   <div class="wrap stats-grid">
@@ -265,6 +124,18 @@ footer .tag em{color:var(--turq);font-style:normal}
     <div class="stat"><b>2</b><span>Deep-dive events held</span></div>
     <div class="stat"><b>50</b><span>Seats at kickoff (sold out)</span></div>
     <div class="stat"><b>4×/yr</b><span>Quarterly, rotating venues</span></div>
+  </div>
+</div>
+
+<!-- HOSTS STRIP: text only. Add logos only with written permission from each organisation. -->
+<div class="hosts">
+  <div class="wrap">
+    <span class="label">Hosts and partners so far</span>
+    <span>SMU Institute of Innovation &amp; Entrepreneurship</span>
+    <span>Illinois ARCS</span>
+    <span>A*STAR</span>
+    <span>NTU GSA Turkish Cultural Group</span>
+    <span>Singapore Turkey Friendship Association</span>
   </div>
 </div>
 
@@ -323,32 +194,36 @@ footer .tag em{color:var(--turq);font-style:normal}
     <div class="sec-head reveal">
       <span class="kicker">Events</span>
       <h2>Deep dives</h2>
-      <p>Every quarter, a new venue and a new topic. All events are listed on <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>.</p>
+      <p>Every quarter, a new venue and a new topic. Each event has its own page with the programme, speakers, and photos. Registration is always on <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>.</p>
     </div>
     <div class="events-grid">
-      <!-- EVENT CARDS: to add a new event, copy one card, update the chip/date/venue/blurb/link. -->
+      <!-- EVENT CARDS: newest last. To add an event, copy a card, then create its page under /events/ (see README). -->
       <div class="event reveal">
         <span class="chip">Event #1 · 12 Dec 2025</span>
-        <h3>Kickoff: Shipping Deep Tech</h3>
+        <h3><a href="/events/2025-12-kickoff/">Community Kickoff and Insights from GRIP</a></h3>
         <p class="meta">SMU Connexion · hosted by SMU Institute of Innovation &amp; Entrepreneurship</p>
-        <p>A sold-out first evening: a Dyson engineer's wearable-device field notes, insights from the GRIP programme, and a community MedTech project review.</p>
-        <a class="more" href="https://luma.com/b2m6nnbh" target="_blank" rel="noopener">Event page ↗</a>
+        <p>A sold-out first evening: a Dyson engineer's wearable-device field notes, a MedTech project on dementia, and the community's plans for 2026.</p>
+        <div class="links"><a href="/events/2025-12-kickoff/">Recap and photos →</a></div>
       </div>
       <div class="event reveal">
         <span class="chip">Event #2 · 14 May 2026</span>
-        <h3>Cybersecurity and AI</h3>
+        <h3><a href="/events/2026-05-cybersecurity-and-ai/">Cybersecurity and AI</a></h3>
         <p class="meta">Illinois ARCS, CREATE Tower</p>
         <p>One threat, two perspectives: academia and industry in the same room, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore.</p>
-        <a class="more" href="https://luma.com/o2g5rtyi" target="_blank" rel="noopener">Event page ↗</a>
+        <div class="links"><a href="/events/2026-05-cybersecurity-and-ai/">Recap and photos →</a></div>
       </div>
-      <div class="event reveal">
+      <div class="event reveal" data-until="2026-09-23T20:30:00+08:00" data-past="chip">
         <span class="chip next">Event #3 · 23 Sep 2026</span>
-        <h3>Robotics and AI</h3>
-        <p class="meta">Infuse Theatre, Level 14, Connexis South Tower, 1 Fusionopolis Way</p>
-        <p>Embodied intelligence, from research bench to factory floor. First confirmed speaker: Dr Cihan Acar, Senior Research Scientist, A*STAR. More speakers to be announced.</p>
-        <a class="more" href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Follow on Luma ↗</a>
+        <h3><a href="/events/2026-09-robotics-and-embodied-ai/">Robotics and Embodied AI</a></h3>
+        <p class="meta">Infuse Theatre, Fusionopolis · venue hosted by A*STAR</p>
+        <p>Embodied intelligence, from research bench to factory floor, with Dr Cihan Acar (A*STAR), Garen Haddeler (dConstruct Robotics), and Altar Koca (OmniVision).</p>
+        <div class="links">
+          <a href="/events/2026-09-robotics-and-embodied-ai/" data-past-text="Recap and photos →">Programme →</a>
+          <a href="https://luma.com/c4dyttkm" target="_blank" rel="noopener" data-past-text="Event page ↗">Register ↗</a>
+        </div>
       </div>
     </div>
+    <p class="sec-foot reveal"><a href="/events/">All events →</a></p>
   </div>
 </section>
 
@@ -367,14 +242,58 @@ footer .tag em{color:var(--turq);font-style:normal}
       <div class="tile reveal">
         <h3>Speak or host</h3>
         <p>Have a talk, a lab tour, or a venue? We rotate across universities, research centres, and startup offices.</p>
-        <a href="mailto:buraks@smu.edu.sg?subject=The%20Turquoise%20Dot%3A%20speaking%20or%20hosting">Propose a talk or venue →</a>
+        <a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20speaking%20or%20hosting">Propose a talk or venue →</a>
       </div>
       <div class="tile reveal">
         <h3>Partner or sponsor</h3>
-        <p>Back Singapore's Turkish and Turkic deep-tech community and reach researchers, founders, and engineers.</p>
-        <a href="mailto:buraks@smu.edu.sg?subject=The%20Turquoise%20Dot%3A%20partnership">Start a conversation →</a>
+        <p>Back Singapore's Turkish and Turkic deep-tech community and reach researchers, founders, and engineers. We are planning 2027 now.</p>
+        <a href="/sponsors/">Partner with us in 2027 →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Core Members</span>
+      <h2>The people behind the dot</h2>
+      <p>A small core team runs the community as volunteers, with more members joining soon.</p>
+    </div>
+    <!-- TEAM CARDS: name, professional role line, LinkedIn. No personal emails; use the community address below. -->
+    <div class="people">
+      <div class="person reveal">
+        <b>Dr Burak Satar</b>
+        <span>Research Scientist, Singapore Management University</span>
+        <a href="https://www.linkedin.com/in/buraksatar" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="person reveal">
+        <b>Dr Ertem Esiner</b>
+        <span>Research Lead, Illinois ARCS · Adjunct Assistant Professor, SUTD</span>
+        <a href="https://www.linkedin.com/in/esiner" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="person reveal">
+        <b>Pınar Bilgin</b>
+        <span>CTO, My Audit Companion (MAuC)</span>
+        <a href="https://www.linkedin.com/in/pinar-bilgin-b4729468" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <p class="team-note reveal">The core team is expanding. If you want to help run the community, <a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20joining%20the%20core%20team">write to us →</a></p>
+  </div>
+</section>
+
+<!-- LATEST POSTS: the LinkedIn embed slot takes the newest post (paste the iframe from the post's "Embed this post" menu
+     between the li-embed div tags). The cards below come from assets/posts.js. The section hides itself while both are empty. -->
+<section id="latest" class="involve">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Latest</span>
+      <h2>From LinkedIn and X</h2>
+      <p>Announcements and recaps go out on <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn</a> first, then <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>.</p>
+    </div>
+    <div class="li-embed reveal" data-li-embed>
+    </div>
+    <div class="posts" data-posts="3"></div>
   </div>
 </section>
 
@@ -385,21 +304,20 @@ footer .tag em{color:var(--turq);font-style:normal}
       <h2>Say merhaba</h2>
     </div>
     <div class="contact-grid">
-      <div class="person reveal">
-        <b>Dr Burak Satar</b>
-        <span>Research Scientist, Singapore Management University</span>
-        <a href="mailto:buraks@smu.edu.sg">buraks@smu.edu.sg</a>
+      <div class="contact-card reveal">
+        <b>One address for everything</b>
+        <p>Talks, venues, partnerships, press, and joining the team.</p>
+        <a class="mail" href="mailto:turquoisedotsg@gmail.com">turquoisedotsg@gmail.com</a>
       </div>
-      <div class="person reveal">
-        <b>Dr Ertem Esiner</b>
-        <span>Research Lead, Illinois ARCS · Adjunct Assistant Professor, SUTD</span>
-        <a href="mailto:e.esiner@iarcs-create.edu.sg">e.esiner@iarcs-create.edu.sg</a>
+      <div class="contact-card reveal">
+        <b>Follow along</b>
+        <p>Event announcements and recaps go out on LinkedIn first, then X. Registration lives on Luma.</p>
+        <div class="links-row">
+          <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X ↗</a>
+          <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma ↗</a>
+        </div>
       </div>
-    </div>
-    <div class="links-row reveal">
-      <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma ↗</a>
-      <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:buraks@smu.edu.sg">Email</a>
     </div>
   </div>
 </section>
@@ -407,22 +325,19 @@ footer .tag em{color:var(--turq);font-style:normal}
 <footer>
   <div class="wrap foot">
     <div>© 2026 The Turquoise Dot · Singapore</div>
+    <div class="foot-links">
+      <a href="/events/">Events</a>
+      <a href="/sponsors/">Sponsors</a>
+      <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
+      <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
+      <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+    </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>
   </div>
 </footer>
 
-<script>
-(function(){
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-})();
-</script>
-
+<script src="/assets/posts.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
