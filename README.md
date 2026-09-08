@@ -1,7 +1,7 @@
 # The Turquoise Dot website
 
 Landing page for **The Turquoise Dot**, Singapore's Turkish and Turkic tech and research community.
-Live at: https://theturquoisedot.github.io/ (custom domain `turquoisedot.sg` planned).
+Live at: https://turquoisedot.org/ (GitHub Pages; theturquoisedot.github.io redirects here).
 
 ## How this site works
 
@@ -16,7 +16,7 @@ Live at: https://theturquoisedot.github.io/ (custom domain `turquoisedot.sg` pla
 - **Add a new event:** in `index.html`, find the `EVENT CARDS` comment inside `<section id="events">`, copy one `<div class="event">…</div>` block, and update the date chip, title, venue, blurb, and Luma link. Move older events down; keep the "announcing soon" card last, pointing to Luma.
 - **Update stats:** edit the four `<div class="stat">` blocks.
 - **Change contacts:** edit `<section id="contact">`. Prefer role-based addresses (president@ / secretary@) once the custom domain and Society registration are in place.
-- **Custom domain:** when `turquoisedot.sg` goes live, add a `CNAME` file containing `turquoisedot.sg`, enable HTTPS in the repo's Pages settings, and update the `canonical`, `og:url`, and `og:image` URLs in `index.html`.
+- **Custom domain:** `turquoisedot.org` is set via the `CNAME` file (do not delete it). DNS lives in the GoDaddy account: four A records on the apex pointing to GitHub Pages IPs, plus a `www` CNAME to `theturquoisedot.github.io`. Keep "Enforce HTTPS" ticked in the repo's Pages settings. If the domain ever moves, update `CNAME` and the `canonical`, `og:url`, and `og:image` URLs in `index.html`.
 
 ## Conventions
 
