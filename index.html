@@ -20,12 +20,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 
 <script type="application/ld+json">
 {
@@ -146,7 +145,10 @@
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="#about">What we do</a>
       <a href="#events">Events</a>
@@ -159,6 +161,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
@@ -176,9 +180,11 @@
         <a class="btn btn-ghost" href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">Follow on LinkedIn</a>
       </div>
     </div>
-    <div class="hero-art">
-      <img src="/assets/turquoise-dot-hero.webp" width="1064" height="661"
-           alt="The Turquoise Dot: a pixel mosaic map of Singapore with glowing turquoise dots, above the community's neon wordmark" fetchpriority="high">
+    <div>
+      <div class="hero-art">
+        <img src="/assets/events/2026-05-cybersecurity-and-ai/08.webp" width="1200" height="900" alt="The audience at Illinois ARCS, CREATE Tower, during the second deep dive" fetchpriority="high">
+      </div>
+      <p class="hero-cap">Event #2, Cybersecurity and AI, at Illinois ARCS, May 2026</p>
     </div>
   </div>
 </header>
@@ -186,7 +192,7 @@
 <!-- SPOTLIGHT: the current event. Hides itself after data-until. EDIT: everything inside for each new event. -->
 <div class="spotlight" data-until="2026-09-23T20:30:00+08:00">
   <div class="wrap">
-    <div class="spot reveal">
+    <div class="spot">
       <div>
         <span class="chip next">Next event · 23 Sep 2026 · 17:30</span>
         <h2>Robotics and Embodied AI</h2>
@@ -210,12 +216,10 @@
   </div>
 </div>
 
-<div class="stats">
-  <div class="wrap stats-grid">
-    <div class="stat"><b>Dec 2025</b><span>Founded in Singapore</span></div>
-    <div class="stat"><b>2</b><span>Deep-dive events held</span></div>
-    <div class="stat"><b>50</b><span>Seats at kickoff (sold out)</span></div>
-    <div class="stat"><b>4×/yr</b><span>Quarterly, rotating venues</span></div>
+<!-- FACTS LINE: one sentence of numbers. EDIT after each event. -->
+<div class="facts-line">
+  <div class="wrap">
+    <p><b>Founded in Singapore, December 2025</b><span class="sep">·</span>Two deep dives held, 50 seats sold out at the kickoff<span class="sep">·</span>Quarterly, at rotating venues across the city</p>
   </div>
 </div>
 
@@ -233,28 +237,28 @@
 
 <section id="about">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">What we do</span>
       <h2>Deep tech, in depth: one topic at a time</h2>
       <p>Turkish and Turkic minds are shaping deep tech across the globe. The Turquoise Dot is their home in Asia's innovation capital.</p>
     </div>
     <div class="cards">
-      <div class="card reveal">
+      <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="10" r="2.4"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19M14.8 15.7c2.2.2 3.9 1.4 4.6 3.3"/></svg></div>
         <h3>Gather Turkish and Turkic minds</h3>
         <p>Quarterly meetups at rotating venues: universities, research centres, startup offices. Each goes deep on one topic, with real talks and honest Q&amp;A.</p>
       </div>
-      <div class="card reveal">
+      <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7.8 7.6l2.9 8M16.2 7.6l-2.9 8M8.4 6h7.2"/></svg></div>
         <h3>Collaborate with Singapore's ecosystem</h3>
         <p>Co-hosting with local tech communities, research institutes, and university incubators, cross-pollinating ideas across Singapore's deep-tech scene.</p>
       </div>
-      <div class="card reveal">
+      <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="4.5" cy="16" r="2"/><circle cx="19.5" cy="16" r="2"/><path d="M6.2 14.6C8.5 9.5 15.5 9.5 17.8 14.6"/></svg></div>
         <h3>Connect Türkiye ↔ Singapore</h3>
         <p>A two-way deep-tech corridor already exists. We widen it through research links, startup exchange, and shared programmes between the two ecosystems.</p>
       </div>
-      <div class="card reveal">
+      <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 0 1 2-2h7v18M14 21h5M14 8h.01M9 21H4"/><path d="M17 9l3 3-3 3"/></svg></div>
         <h3>Open doors for the next generation</h3>
         <p>Building a talent bridge toward internships and research opportunities for students and early-career researchers, in both directions.</p>
@@ -263,48 +267,35 @@
   </div>
 </section>
 
-<div class="corridor reveal" aria-hidden="true">
-  <svg viewBox="0 0 520 110">
-    <defs>
-      <linearGradient id="arc" x1="0" x2="1">
-        <stop offset="0" stop-color="#40E8DC"/><stop offset="1" stop-color="#E86E63"/>
-      </linearGradient>
-    </defs>
-    <path d="M60 88 Q260 -30 460 88" stroke="url(#arc)" stroke-width="1.6" fill="none" stroke-dasharray="5 7" opacity=".8"/>
-    <circle cx="60" cy="88" r="6" fill="#40E8DC"/>
-    <circle cx="60" cy="88" r="11" fill="#40E8DC" opacity=".18"/>
-    <circle cx="460" cy="88" r="6" fill="#E86E63"/>
-    <circle cx="460" cy="88" r="11" fill="#E86E63" opacity=".18"/>
-    <text x="60" y="107" text-anchor="middle" fill="#9FB0B5" font-size="11" font-family="Inter,sans-serif">Türkiye</text>
-    <text x="460" y="107" text-anchor="middle" fill="#9FB0B5" font-size="11" font-family="Inter,sans-serif">Singapore</text>
-  </svg>
+<div class="corridor" aria-hidden="true">
+  <svg viewBox="0 0 520 116" shape-rendering="crispEdges"><rect class="px" x="78" y="75" width="4" height="4"/><rect class="px" x="88" y="70" width="4" height="4"/><rect class="px" x="98" y="65" width="4" height="4"/><rect class="px" x="118" y="56" width="4" height="4"/><rect class="px" x="138" y="48" width="4" height="4"/><rect class="px" x="158" y="42" width="4" height="4"/><rect class="px" x="178" y="36" width="4" height="4"/><rect class="px" x="198" y="32" width="4" height="4"/><rect class="px" x="218" y="29" width="4" height="4"/><rect class="px" x="238" y="28" width="4" height="4"/><rect class="px" x="258" y="27" width="4" height="4"/><rect class="px" x="278" y="28" width="4" height="4"/><rect class="px" x="298" y="29" width="4" height="4"/><rect class="px" x="318" y="32" width="4" height="4"/><rect class="px" x="338" y="36" width="4" height="4"/><rect class="px" x="358" y="42" width="4" height="4"/><rect class="px" x="378" y="48" width="4" height="4"/><rect class="px" x="398" y="56" width="4" height="4"/><rect class="px" x="418" y="65" width="4" height="4"/><rect class="px" x="428" y="70" width="4" height="4"/><rect class="px" x="438" y="75" width="4" height="4"/><rect class="n-edge" x="58.5" y="74.5" width="3" height="3"/><rect class="n-edge" x="55.5" y="77.5" width="3" height="3"/><rect class="n-tr" x="58.5" y="77.5" width="3" height="3"/><rect class="n-edge" x="61.5" y="77.5" width="3" height="3"/><rect class="n-edge" x="52.5" y="80.5" width="3" height="3"/><rect class="n-tr" x="55.5" y="80.5" width="3" height="3"/><rect class="n-tr" x="58.5" y="80.5" width="3" height="3"/><rect class="n-tr" x="61.5" y="80.5" width="3" height="3"/><rect class="n-edge" x="64.5" y="80.5" width="3" height="3"/><rect class="n-edge" x="49.5" y="83.5" width="3" height="3"/><rect class="n-tr" x="52.5" y="83.5" width="3" height="3"/><rect class="n-tr" x="55.5" y="83.5" width="3" height="3"/><rect class="n-ring" x="58.5" y="83.5" width="3" height="3"/><rect class="n-tr" x="61.5" y="83.5" width="3" height="3"/><rect class="n-tr" x="64.5" y="83.5" width="3" height="3"/><rect class="n-edge" x="67.5" y="83.5" width="3" height="3"/><rect class="n-edge" x="46.5" y="86.5" width="3" height="3"/><rect class="n-tr" x="49.5" y="86.5" width="3" height="3"/><rect class="n-tr" x="52.5" y="86.5" width="3" height="3"/><rect class="n-ring" x="55.5" y="86.5" width="3" height="3"/><rect class="n-sg" x="58.5" y="86.5" width="3" height="3"/><rect class="n-ring" x="61.5" y="86.5" width="3" height="3"/><rect class="n-tr" x="64.5" y="86.5" width="3" height="3"/><rect class="n-tr" x="67.5" y="86.5" width="3" height="3"/><rect class="n-edge" x="70.5" y="86.5" width="3" height="3"/><rect class="n-edge" x="49.5" y="89.5" width="3" height="3"/><rect class="n-tr" x="52.5" y="89.5" width="3" height="3"/><rect class="n-tr" x="55.5" y="89.5" width="3" height="3"/><rect class="n-ring" x="58.5" y="89.5" width="3" height="3"/><rect class="n-tr" x="61.5" y="89.5" width="3" height="3"/><rect class="n-tr" x="64.5" y="89.5" width="3" height="3"/><rect class="n-edge" x="67.5" y="89.5" width="3" height="3"/><rect class="n-edge" x="52.5" y="92.5" width="3" height="3"/><rect class="n-tr" x="55.5" y="92.5" width="3" height="3"/><rect class="n-tr" x="58.5" y="92.5" width="3" height="3"/><rect class="n-tr" x="61.5" y="92.5" width="3" height="3"/><rect class="n-edge" x="64.5" y="92.5" width="3" height="3"/><rect class="n-edge" x="55.5" y="95.5" width="3" height="3"/><rect class="n-tr" x="58.5" y="95.5" width="3" height="3"/><rect class="n-edge" x="61.5" y="95.5" width="3" height="3"/><rect class="n-edge" x="58.5" y="98.5" width="3" height="3"/><rect class="n-edge" x="458.5" y="74.5" width="3" height="3"/><rect class="n-edge" x="455.5" y="77.5" width="3" height="3"/><rect class="n-sg" x="458.5" y="77.5" width="3" height="3"/><rect class="n-edge" x="461.5" y="77.5" width="3" height="3"/><rect class="n-edge" x="452.5" y="80.5" width="3" height="3"/><rect class="n-sg" x="455.5" y="80.5" width="3" height="3"/><rect class="n-sg" x="458.5" y="80.5" width="3" height="3"/><rect class="n-sg" x="461.5" y="80.5" width="3" height="3"/><rect class="n-edge" x="464.5" y="80.5" width="3" height="3"/><rect class="n-edge" x="449.5" y="83.5" width="3" height="3"/><rect class="n-sg" x="452.5" y="83.5" width="3" height="3"/><rect class="n-sg" x="455.5" y="83.5" width="3" height="3"/><rect class="n-ring" x="458.5" y="83.5" width="3" height="3"/><rect class="n-sg" x="461.5" y="83.5" width="3" height="3"/><rect class="n-sg" x="464.5" y="83.5" width="3" height="3"/><rect class="n-edge" x="467.5" y="83.5" width="3" height="3"/><rect class="n-edge" x="446.5" y="86.5" width="3" height="3"/><rect class="n-sg" x="449.5" y="86.5" width="3" height="3"/><rect class="n-sg" x="452.5" y="86.5" width="3" height="3"/><rect class="n-ring" x="455.5" y="86.5" width="3" height="3"/><rect class="n-tr" x="458.5" y="86.5" width="3" height="3"/><rect class="n-ring" x="461.5" y="86.5" width="3" height="3"/><rect class="n-sg" x="464.5" y="86.5" width="3" height="3"/><rect class="n-sg" x="467.5" y="86.5" width="3" height="3"/><rect class="n-edge" x="470.5" y="86.5" width="3" height="3"/><rect class="n-edge" x="449.5" y="89.5" width="3" height="3"/><rect class="n-sg" x="452.5" y="89.5" width="3" height="3"/><rect class="n-sg" x="455.5" y="89.5" width="3" height="3"/><rect class="n-ring" x="458.5" y="89.5" width="3" height="3"/><rect class="n-sg" x="461.5" y="89.5" width="3" height="3"/><rect class="n-sg" x="464.5" y="89.5" width="3" height="3"/><rect class="n-edge" x="467.5" y="89.5" width="3" height="3"/><rect class="n-edge" x="452.5" y="92.5" width="3" height="3"/><rect class="n-sg" x="455.5" y="92.5" width="3" height="3"/><rect class="n-sg" x="458.5" y="92.5" width="3" height="3"/><rect class="n-sg" x="461.5" y="92.5" width="3" height="3"/><rect class="n-edge" x="464.5" y="92.5" width="3" height="3"/><rect class="n-edge" x="455.5" y="95.5" width="3" height="3"/><rect class="n-sg" x="458.5" y="95.5" width="3" height="3"/><rect class="n-edge" x="461.5" y="95.5" width="3" height="3"/><rect class="n-edge" x="458.5" y="98.5" width="3" height="3"/><text x="60" y="113" text-anchor="middle">Türkiye</text><text x="460" y="113" text-anchor="middle">Singapore</text></svg>
   <p><b>Two nodes, one corridor</b>, connected through deep tech.</p>
 </div>
 
 <section id="events">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Events</span>
       <h2>Deep dives</h2>
       <p>Every quarter, a new venue and a new topic. Each event has its own page with the programme, speakers, and photos. Registration is always on <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>.</p>
     </div>
     <div class="events-grid">
       <!-- EVENT CARDS: newest last. To add an event, copy a card, then create its page under /events/ (see README). -->
-      <div class="event reveal">
+      <div class="event">
         <span class="chip">Event #1 · 12 Dec 2025</span>
         <h3><a href="/events/2025-12-kickoff/">Community Kickoff and Insights from GRIP</a></h3>
         <p class="meta">SMU Connexion · hosted by SMU Institute of Innovation &amp; Entrepreneurship</p>
         <p>A sold-out first evening: a Dyson engineer's wearable-device field notes, a MedTech project on dementia, and the community's plans for 2026.</p>
         <div class="links"><a href="/events/2025-12-kickoff/">Recap and photos →</a></div>
       </div>
-      <div class="event reveal">
+      <div class="event">
         <span class="chip">Event #2 · 14 May 2026</span>
         <h3><a href="/events/2026-05-cybersecurity-and-ai/">Cybersecurity and AI</a></h3>
         <p class="meta">Illinois ARCS, CREATE Tower</p>
         <p>One threat, two perspectives: academia and industry in the same room, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore.</p>
         <div class="links"><a href="/events/2026-05-cybersecurity-and-ai/">Recap and photos →</a><a href="/events/2026-05-cybersecurity-and-ai/#watch">Watch the Ambassador's remarks ▶</a></div>
       </div>
-      <div class="event reveal" data-until="2026-09-23T20:30:00+08:00" data-past="chip">
+      <div class="event" data-until="2026-09-23T20:30:00+08:00" data-past="chip">
         <span class="chip next">Event #3 · 23 Sep 2026</span>
         <h3><a href="/events/2026-09-robotics-and-embodied-ai/">Robotics and Embodied AI</a></h3>
         <p class="meta">Infuse Theatre, Fusionopolis · venue hosted by A*STAR</p>
@@ -315,28 +306,28 @@
         </div>
       </div>
     </div>
-    <p class="sec-foot reveal"><a href="/events/">All events →</a></p>
+    <p class="sec-foot"><a href="/events/">All events →</a></p>
   </div>
 </section>
 
 <section class="involve" id="join">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Get involved</span>
       <h2>Be part of the corridor</h2>
     </div>
     <div class="tiles">
-      <div class="tile reveal">
+      <div class="tile">
         <h3>Attend</h3>
         <p>Every event is free to join and listed on Luma. Bring a question; our Q&amp;A is the honest kind.</p>
         <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">See upcoming events →</a>
       </div>
-      <div class="tile reveal">
+      <div class="tile">
         <h3>Speak or host</h3>
         <p>Have a talk, a lab tour, or a venue? We rotate across universities, research centres, and startup offices.</p>
         <a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20speaking%20or%20hosting">Propose a talk or venue →</a>
       </div>
-      <div class="tile reveal">
+      <div class="tile">
         <h3>Partner or sponsor</h3>
         <p>Back Singapore's Turkish and Turkic deep-tech community and reach researchers, founders, and engineers. We are planning 2027 now.</p>
         <a href="/sponsors/">Partner with us in 2027 →</a>
@@ -347,30 +338,30 @@
 
 <section id="team">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Core Members</span>
       <h2>The people behind the dot</h2>
       <p>A small core team runs the community as volunteers, with more members joining soon.</p>
     </div>
     <!-- TEAM CARDS: name, professional role line, LinkedIn. No personal emails; use the community address below. -->
     <div class="people">
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Burak Satar</b>
         <span>Research Scientist, Singapore Management University</span>
         <a href="https://www.linkedin.com/in/buraksatar" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Ertem Esiner</b>
         <span>Research Lead, Illinois ARCS · Adjunct Assistant Professor, SUTD</span>
         <a href="https://www.linkedin.com/in/esiner" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Pınar Bilgin</b>
         <span>CTO, My Audit Companion (MAuC)</span>
         <a href="https://www.linkedin.com/in/pinar-bilgin-b4729468" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
-    <p class="team-note reveal">The core team is expanding. If you want to help run the community, <a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20joining%20the%20core%20team">write to us →</a></p>
+    <p class="team-note">The core team is expanding. If you want to help run the community, <a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20joining%20the%20core%20team">write to us →</a></p>
   </div>
 </section>
 
@@ -378,12 +369,12 @@
      between the li-embed div tags). The cards below come from assets/posts.js. The section hides itself while both are empty. -->
 <section id="latest" class="involve">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Latest</span>
       <h2>From LinkedIn and X</h2>
       <p>Announcements and recaps go out on <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn</a> first, then <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>.</p>
     </div>
-    <div class="li-embed reveal" data-li-embed>
+    <div class="li-embed" data-li-embed>
     </div>
     <div class="posts" data-posts="3"></div>
   </div>
@@ -391,17 +382,17 @@
 
 <section id="contact">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Contact</span>
       <h2>Say merhaba</h2>
     </div>
     <div class="contact-grid">
-      <div class="contact-card reveal">
+      <div class="contact-card">
         <b>One address for everything</b>
         <p>Talks, venues, partnerships, press, and joining the team.</p>
         <a class="mail" href="mailto:turquoisedotsg@gmail.com">turquoisedotsg@gmail.com</a>
       </div>
-      <div class="contact-card reveal">
+      <div class="contact-card">
         <b>Follow along</b>
         <p>Event announcements and recaps go out on LinkedIn first, then X. Registration lives on Luma.</p>
         <div class="links-row">

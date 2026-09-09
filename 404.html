@@ -9,19 +9,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="/#about">What we do</a>
       <a href="/events/">Events</a>
@@ -34,6 +36,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="page-head">
   <div class="wrap">

@@ -17,19 +17,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="/#about">What we do</a>
       <a href="/events/">Events</a>
@@ -42,6 +44,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="page-head">
   <div class="wrap narrow">
@@ -70,7 +74,7 @@
     <p>This site uses <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a> to count visits. It sets no cookies and stores no personal data; we only see page counts, countries, and referring sites.</p>
 
     <h2>Third-party services on this site</h2>
-    <p>Pages load fonts from Google Fonts, the Sponsors page embeds a Google Form, and event pages link to Luma. Each of these services has its own privacy policy and may set its own cookies when you use it.</p>
+    <p>Fonts are served from this site itself. The Sponsors page embeds a Google Form and event pages link to Luma; each of those services has its own privacy policy and may set its own cookies when you use it.</p>
 
     <h2>Your choices</h2>
     <p>You can ask what we hold about you, ask us to correct or delete it, or withdraw consent to further emails at any time by writing to <a href="mailto:turquoisedotsg@gmail.com">turquoisedotsg@gmail.com</a>. We do not sell or share personal data with anyone outside the core team and the venue host for a given event.</p>

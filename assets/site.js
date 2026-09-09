@@ -64,7 +64,7 @@ var TD_GOATCOUNTER_CODE = 'turquoisedot';
     var max = parseInt(postsBox.getAttribute('data-posts'), 10) || 3;
     window.TD_POSTS.slice(0, max).forEach(function (p) {
       var el = document.createElement('article');
-      el.className = 'post reveal';
+      el.className = 'post';
       var label = p.platform === 'x' ? 'X' : 'LinkedIn';
       var html = '<div class="src">' + (icons[p.platform] || '') + '<span>' + label + (p.date ? ' · ' + p.date : '') + '</span></div>';
       if (p.image) html += '<img src="' + p.image + '" alt="' + (p.alt || '') + '" loading="lazy">';
@@ -80,15 +80,23 @@ var TD_GOATCOUNTER_CODE = 'turquoisedot';
     if (sec && !hasEmbed) sec.hidden = true;
   }
 
-  /* ---------- 5. Reveal on scroll ---------- */
-  var reveals = document.querySelectorAll('.reveal');
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-    reveals.forEach(function (el) { el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: .12 });
-    reveals.forEach(function (el) { io.observe(el); });
+  /* ---------- 5. Light / dark toggle ----------
+     The head of each page applies a saved choice before paint; this button flips it and remembers it. */
+  var tb = document.querySelector('[data-theme-toggle]');
+  if (tb) {
+    var current = function () {
+      var t = document.documentElement.getAttribute('data-theme');
+      if (t) return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    var label = function () { tb.textContent = current() === 'dark' ? 'Light' : 'Dark'; };
+    tb.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('td-theme', next); } catch (e) {}
+      label();
+    });
+    label();
   }
 
   /* ---------- 6. Analytics (privacy-friendly, no cookies) ---------- */

@@ -20,12 +20,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 
 <script type="application/ld+json">
 {
@@ -127,7 +126,10 @@
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="/#about">What we do</a>
       <a href="/events/" aria-current="page">Events</a>
@@ -140,6 +142,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="page-head" data-until="2026-09-23T20:30:00+08:00" data-past="chip">
   <div class="wrap">
@@ -161,22 +165,22 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Speakers</span>
       <h2>Research, field, and sensors</h2>
     </div>
     <div class="people">
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Cihan Acar</b>
         <span>Senior Research Scientist, A*STAR</span>
         <i>Main talk: the research behind embodied AI</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Garen Haddeler</b>
         <span>Robotics Engineer, dConstruct Robotics</span>
         <i>Lightning talk: robots already working in the field</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Altar Koca</b>
         <span>Design Engineer, OmniVision</span>
         <i>Main talk: the sensors that let machines see</i>
@@ -188,11 +192,11 @@
 <section class="involve" id="programme">
   <div class="wrap two-col">
     <div>
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <span class="kicker">Programme</span>
         <h2>The evening</h2>
       </div>
-      <ul class="programme reveal">
+      <ul class="programme">
         <li><b>17:30</b> Networking with Turkish tea and light refreshments</li>
         <li><b>18:15</b> Welcome remarks</li>
         <li><b>18:20</b> Main talk: Dr Cihan Acar, with Q&amp;A</li>
@@ -202,7 +206,7 @@
         <li><b>20:00</b> Closing remarks</li>
       </ul>
     </div>
-    <div class="prose reveal">
+    <div class="prose">
       <div class="sec-head">
         <span class="kicker">Good to know</span>
         <h2>Getting there</h2>
@@ -214,7 +218,7 @@
 </section>
 
 <section id="poster" class="involve" data-until="2026-09-23T20:30:00+08:00">
-  <div class="wrap poster-wrap reveal">
+  <div class="wrap poster-wrap">
     <figure>
       <img src="/assets/events/2026-09-robotics-and-embodied-ai/poster.webp" width="1200" height="1200" alt="Event poster: Robotics and Embodied AI, 23 September 2026, Infuse Theatre, with speakers Cihan Acar, Garen Haddeler and Altar Koca" loading="lazy">
     </figure>
@@ -239,7 +243,7 @@
 
 <section class="sec-slim">
   <div class="wrap">
-    <p class="links-row reveal">
+    <p class="links-row">
       <a href="/events/">← All events</a>
       <a href="https://luma.com/c4dyttkm" target="_blank" rel="noopener">Luma page ↗</a>
       <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn ↗</a>

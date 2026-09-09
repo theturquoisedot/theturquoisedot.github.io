@@ -20,12 +20,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 
 <script type="application/ld+json">
 {
@@ -120,7 +119,10 @@
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="/#about">What we do</a>
       <a href="/events/" aria-current="page">Events</a>
@@ -133,6 +135,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="page-head">
   <div class="wrap">
@@ -153,22 +157,22 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Speakers</span>
       <h2>Field notes, a project review, and a plan</h2>
     </div>
     <div class="people">
-      <div class="person reveal">
+      <div class="person">
         <b>Selman Kurt</b>
         <span>Senior Research Engineer, Dyson</span>
         <i>Learning from failures: a wearable device</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Furkan Ilaslan</b>
         <span>PhD Candidate, National University of Singapore</span>
         <i>A MedTech project on dementia</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Burak Satar</b>
         <span>Research Scientist, Singapore Management University</span>
         <i>Shaping 2026: projections for our community</i>
@@ -180,11 +184,11 @@
 <section class="involve" id="programme">
   <div class="wrap two-col">
     <div>
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <span class="kicker">Programme</span>
         <h2>The evening</h2>
       </div>
-      <ul class="programme reveal">
+      <ul class="programme">
         <li><b>18:30</b> Registration and networking</li>
         <li><b>19:00</b> Opening remarks</li>
         <li><b>19:05</b> Learning from failures: a wearable device</li>
@@ -194,7 +198,7 @@
         <li><b>20:30</b> Close</li>
       </ul>
     </div>
-    <div class="prose reveal">
+    <div class="prose">
       <div class="sec-head">
         <span class="kicker">Recap</span>
         <h2>What happened</h2>
@@ -208,12 +212,12 @@
 
 <section id="photos">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Photos</span>
       <h2>The room</h2>
     </div>
     <!-- GALLERY: first figure is the large tile (class="wide"). Keep 9 photos for a clean grid, each under 300 KB. -->
-    <div class="gallery reveal">
+    <div class="gallery">
       <figure class="wide"><img src="/assets/events/2025-12-kickoff/01.webp" alt="Group photo of the kickoff audience in front of the event banner at SMU Connexion" loading="lazy"></figure>
       <figure><img src="/assets/events/2025-12-kickoff/02.webp" alt="Selman Kurt of Dyson opening his talk on a wearable device" loading="lazy"></figure>
       <figure><img src="/assets/events/2025-12-kickoff/03.webp" alt="Furkan Ilaslan presenting the SPASCA MedTech project on dementia" loading="lazy"></figure>
@@ -230,7 +234,7 @@
 
 <section class="sec-slim">
   <div class="wrap">
-    <p class="links-row reveal">
+    <p class="links-row">
       <a href="/events/">← All events</a>
       <a href="https://luma.com/b2m6nnbh" target="_blank" rel="noopener">Luma page ↗</a>
       <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn ↗</a>

@@ -20,12 +20,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#14181B">
+<meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('td-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 
 <script type="application/ld+json">
 {
@@ -127,7 +126,10 @@
 <nav>
   <div class="nav-inner">
     <a class="brand" href="/">The Turquoise Dot<span class="dot">.</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark" data-theme-toggle>Dark</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
     <div class="nav-links" id="nav-links">
       <a href="/#about">What we do</a>
       <a href="/events/" aria-current="page">Events</a>
@@ -140,6 +142,8 @@
 </nav>
 
 <main>
+
+<div class="kilim" aria-hidden="true"></div>
 
 <header class="page-head">
   <div class="wrap">
@@ -159,7 +163,7 @@
 </header>
 
 <section class="involve" id="watch">
-  <div class="wrap watch-wrap reveal">
+  <div class="wrap watch-wrap">
     <video controls preload="metadata" playsinline width="960" height="960" poster="/assets/events/2026-05-cybersecurity-and-ai/ambassador-remarks.jpg">
       <source src="/assets/events/2026-05-cybersecurity-and-ai/ambassador-remarks.mp4" type="video/mp4">
       Your browser cannot play this video. <a href="/assets/events/2026-05-cybersecurity-and-ai/ambassador-remarks.mp4">Download the clip</a>.
@@ -175,27 +179,27 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Speakers and guests</span>
       <h2>Academia and industry, one room</h2>
     </div>
     <div class="people">
-      <div class="person reveal">
+      <div class="person">
         <b>H.E. Sadık Arslan</b>
         <span>Ambassador of Türkiye to Singapore</span>
         <i>Opening remarks</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Ertem Esiner</b>
         <span>Research Lead, Illinois ARCS</span>
         <i>Cryptography and AI for cybersecurity</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Dr Xenia R. Santos</b>
         <span>Postdoctoral Researcher, Illinois ARCS</span>
         <i>Machine learning and network security</i>
       </div>
-      <div class="person reveal">
+      <div class="person">
         <b>Selcuk Beyhan</b>
         <span>Founder, Tosba Tech</span>
         <i>Cybersecurity from the industry side, after 20+ years in IT security</i>
@@ -207,11 +211,11 @@
 <section class="involve" id="programme">
   <div class="wrap two-col">
     <div>
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <span class="kicker">Programme</span>
         <h2>The evening</h2>
       </div>
-      <ul class="programme reveal">
+      <ul class="programme">
         <li><b>18:00</b> Registration and networking</li>
         <li><b>18:30</b> Welcome remarks by Dr Jonas Joerin, Managing Director, Illinois ARCS</li>
         <li><b>18:35</b> Opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore</li>
@@ -221,7 +225,7 @@
         <li><b>20:30</b> Close</li>
       </ul>
     </div>
-    <div class="prose reveal">
+    <div class="prose">
       <div class="sec-head">
         <span class="kicker">Recap</span>
         <h2>What happened</h2>
@@ -235,12 +239,12 @@
 
 <section id="photos">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="kicker">Photos</span>
       <h2>The room</h2>
     </div>
     <!-- GALLERY: the first figure (class="hero") spans the full width at 16:9; the rest are 4:3 tiles in rows of three. Keep 1 + 9 for a clean grid, each under 300 KB. -->
-    <div class="gallery reveal">
+    <div class="gallery">
       <figure class="hero"><img src="/assets/events/2026-05-cybersecurity-and-ai/01.webp" alt="Speakers and organisers with H.E. Sadık Arslan, Ambassador of Türkiye to Singapore, in front of The Turquoise Dot title slide" loading="lazy"></figure>
       <figure><img src="/assets/events/2026-05-cybersecurity-and-ai/02.webp" alt="H.E. Sadık Arslan, Ambassador of Türkiye to Singapore, giving the opening remarks" loading="lazy"></figure>
       <figure><img src="/assets/events/2026-05-cybersecurity-and-ai/03.webp" alt="Dr Jonas Joerin, Managing Director of Illinois ARCS, welcoming the audience" loading="lazy"></figure>
@@ -258,7 +262,7 @@
 
 <section class="sec-slim">
   <div class="wrap">
-    <p class="links-row reveal">
+    <p class="links-row">
       <a href="/events/">← All events</a>
       <a href="https://luma.com/o2g5rtyi" target="_blank" rel="noopener">Luma page ↗</a>
       <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn ↗</a>
