@@ -7,7 +7,7 @@
 - Name: The Turquoise Dot (also written Turquoise Dot or TurquoiseDot). Based in Singapore.
 - What it does: free, in-person "deep dive" events, each on one deep-tech topic, roughly every quarter, with academic and industry speakers and open Q&A, followed by networking over Turkish tea.
 - Who it is for: Turkish and Turkic students, researchers, academics, founders, and professionals in Singapore, plus the local deep-tech ecosystem around them. Events are open to everyone.
-- Core members: Dr Burak Satar (Research Scientist, Singapore Management University), Dr Ertem Esiner (Research Lead, Illinois ARCS; Adjunct Assistant Professor, SUTD), Pınar Bilgin (CTO, My Audit Companion).
+- Core members: Dr Burak Satar (Research Scientist, Singapore Management University), Dr Ertem Esiner (Research Lead, Illinois ARCS; Adjunct Assistant Professor, SUTD), Pinar Bilgin Lim (CTO, My Audit Companion).
 - Status: registering as a Society in Singapore (2026).
 - Contact: turquoisedotsg@gmail.com. LinkedIn: https://www.linkedin.com/company/turquoisedot. X: https://x.com/theturquoisedot. Registration for events: https://luma.com/TurquoiseDot
 
