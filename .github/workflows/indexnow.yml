@@ -1,0 +1,61 @@
+# Tells Bing (and Yandex, Naver, Seznam) that pages changed, within minutes of a push,
+# instead of waiting for them to re-crawl. Bing's index is what ChatGPT search draws on,
+# so this is the AI-search half of discovery.
+#
+# Setup, done once and already done:
+#   1. The key file a7f3c92e14b84d6ab05e7c1f8d23e6b9.txt sits at the repo root and must stay there.
+#      Its contents are the key itself. Do not rename or delete it.
+#   2. Nothing else to configure. No secrets, no tokens.
+#
+# To retire or rotate the key: generate a new 32-character hex string, rename the file to match,
+# and update INDEXNOW_KEY below.
+
+name: Ping IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+      - 'feed.xml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for GitHub Pages to publish
+        run: sleep 90
+
+      - name: Submit every sitemap URL to IndexNow
+        env:
+          INDEXNOW_KEY: a7f3c92e14b84d6ab05e7c1f8d23e6b9
+          HOST: turquoisedot.org
+        run: |
+          set -euo pipefail
+          URLS=$(grep -oP '(?<=<loc>)[^<]+' sitemap.xml | jq -R . | jq -s .)
+          COUNT=$(echo "$URLS" | jq 'length')
+          echo "Submitting $COUNT URLs"
+          PAYLOAD=$(jq -n \
+            --arg host "$HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://$HOST/$INDEXNOW_KEY.txt" \
+            --argjson urlList "$URLS" \
+            '{host:$host, key:$key, keyLocation:$keyLocation, urlList:$urlList}')
+          CODE=$(curl -sS -o /tmp/indexnow.out -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/IndexNow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$PAYLOAD")
+          echo "HTTP $CODE"
+          cat /tmp/indexnow.out || true
+          # 200 accepted, 202 accepted pending key validation. Anything else is a real failure.
+          case "$CODE" in
+            200|202) echo "IndexNow accepted the submission." ;;
+            *) echo "IndexNow rejected the submission."; exit 1 ;;
+          esac

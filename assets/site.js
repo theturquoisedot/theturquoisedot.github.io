@@ -23,6 +23,16 @@ var TD_GOATCOUNTER_CODE = 'turquoisedot';
     }
   });
 
+  /* ---------- 1b. Content that appears only AFTER a moment ----------
+     Any element with data-after="YYYY-MM-DDTHH:MM:SS+08:00" starts hidden in the markup and is
+     revealed once that moment has passed. It is the mirror of data-until above, and it is what keeps
+     the landing page from going quiet the night an event ends. */
+  document.querySelectorAll('[data-after]').forEach(function (el) {
+    var after = Date.parse(el.getAttribute('data-after'));
+    if (isNaN(after) || now <= after) return;
+    el.hidden = false;
+  });
+
   /* ---------- 2. Mobile navigation toggle ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');

@@ -12,6 +12,10 @@ Live at: https://turquoisedot.org/ (GitHub Pages; theturquoisedot.github.io redi
 
 ```
 index.html                                  landing page
+about/index.html                            what the community is and how it is run
+team/index.html                             core team profiles
+faq/index.html                              common questions (mirrored in FAQPage structured data)
+tr/index.html                               Turkish summary of the same facts
 sponsors/index.html                         partnership page with the interest form
 events/index.html                           list of all events
 events/YYYY-MM-slug/index.html              one page per event
@@ -21,7 +25,10 @@ assets/events/YYYY-MM-slug/*.webp           event photos (optional)
 privacy/index.html                          privacy notice (PDPA); update it once the Society is registered
 404.html                                    branded not-found page
 llms.txt                                    plain-text summary of the community for AI assistants; update with each event
+feed.xml                                    Atom feed of events and recaps
 sitemap.xml, robots.txt, site.webmanifest, CNAME, .nojekyll   keep as they are
+a7f3c92e...txt                              IndexNow key file, must stay at the root under this exact name
+.github/workflows/indexnow.yml              pings Bing on every push so new pages are found in hours
 ```
 
 ## Common edits (for future officers)
@@ -38,6 +45,11 @@ sitemap.xml, robots.txt, site.webmanifest, CNAME, .nojekyll   keep as they are
 - **Change the contact email:** search for `turquoisedotsg@gmail.com` across all pages (it appears in the JSON-LD too). Prefer a role address on the domain (for example `hello@turquoisedot.org` forwarding to the community inbox) once email forwarding is set up.
 - **Team:** edit the `TEAM CARDS` block in `index.html`. Professional role line and LinkedIn only; no personal emails.
 - **Analytics:** create a free GoatCounter site under the community Google account and put its code in `TD_GOATCOUNTER_CODE` at the top of `assets/site.js`. Leave it empty to disable.
+- **Between events:** the landing page carries a `BETWEEN DEEP DIVES` block below the spotlight. It is hidden in the markup and reveals itself automatically once the spotlight's moment passes, so the page is never left without something forward-looking. When you announce a new event, set its `data-after` to the same timestamp as the two `data-until` values above it. The standing wording inside it needs no editing.
+- **The FAQ page:** `faq/index.html` carries the same questions twice, once as visible text and once as `FAQPage` structured data in the head. **If you edit one, edit the other in the same commit.** Search engines treat a mismatch as a reason to ignore the markup entirely.
+- **The Turkish page:** `tr/index.html` is a summary, not a full translation, and the English pages stay the source of truth. When an event, a team member or a link changes, update it in the same commit. The `hreflang` tags pairing `/` with `/tr/` live in the head of both pages; keep them in sync.
+- **The feed:** after each event add an `<entry>` at the top of `feed.xml`, update the feed-level `<updated>`, and keep the six most recent. An entry's `<id>` must never change once published.
+- **Indexing:** `sitemap.xml` is maintained by hand. Add a `<url>` for every new page and set `<lastmod>` only on pages that actually changed in that commit; a wrong date is worse than none. Pushing any HTML, `sitemap.xml` or `feed.xml` fires `.github/workflows/indexnow.yml`, which submits every sitemap URL to IndexNow so Bing picks it up within hours. Bing's index is what ChatGPT's search draws on, so this matters more than it looks. The key file at the repo root must keep its exact name; renaming it breaks the workflow.
 - **Structured data:** each page carries JSON-LD (Organization on the landing page, Event plus speakers on event pages, BreadcrumbList on sub-pages). When the core team changes, update the `member` list in `index.html`; when speakers are added, update `performer` on the event page. Test with Google's Rich Results Test after changes.
 - **Custom domain:** `turquoisedot.org` is set via the `CNAME` file (do not delete it). DNS lives in the GoDaddy account: four A records on the apex pointing to GitHub Pages IPs, plus a `www` CNAME to `theturquoisedot.github.io`. Keep "Enforce HTTPS" ticked in the repo's Pages settings. If the domain ever moves, update `CNAME`, `sitemap.xml`, `robots.txt`, and every `canonical`, `og:url`, and `og:image` URL.
 
@@ -49,6 +61,16 @@ sitemap.xml, robots.txt, site.webmanifest, CNAME, .nojekyll   keep as they are
 - **The kilim band:** the 24 px row of stepped diamonds under the masthead (`.kilim`) is an SVG data URI in the `--band` token, one for light and one for dark, generated from a 24 by 12 pixel grid (navy outline, turquoise, paper ring, red centre: the "göz" or eye motif). The 9 px version in `--glyph` marks list items. One band per page; it is the only ornament.
 - **Layout rules:** hairlines (`--rule`) and ruled columns instead of boxed cards; 3 px radius; no drop shadows except the navy "next event" block and the poster; no hover lift, no scroll animation; buttons are rectangular, primary navy, secondary outlined. The red dot precedes every section label (`.kicker`).
 - **Share images:** `assets/og-image.jpg` is rendered from the same system (kilim band, serif wordmark). Event pages use a photo or the poster as their own share image.
+
+## Search and AI visibility
+
+The mechanics are in place; the accounts are the part that needs a person.
+
+- **Google Search Console** and **Bing Webmaster Tools**: verify the domain (DNS TXT at GoDaddy, so it survives repo changes), submit `sitemap.xml`, and request indexing for new pages. Bing matters as much as Google here because ChatGPT's search leans on the Bing index.
+- **IndexNow** runs automatically on push. Nothing to do after the first setup.
+- **Structured data** is spread across the site: `Organization` and `WebSite` on the landing page, `Event` plus speakers on event pages, `Article` on the two pages that carry recaps, `FAQPage` on the FAQ, `BreadcrumbList` everywhere, and a `WebPage` block carrying `dateModified` on each page. Bump `dateModified` when you materially change a page. Test with Google's Rich Results Test.
+- **Speaker `sameAs`:** each `performer` in an event's JSON-LD should carry a `sameAs` array with that person's public profile URL. This is what lets a search engine tell one Cihan Acar from another, and it is the main reason an event page can rank for a speaker's own name. Ask each speaker for a link when you confirm their talk.
+- **Links in beat markup.** The single biggest lever is other people's pages linking here: host institutions, the Embassy, partner communities, event directories. Ask every host for a line and a link on their own site after each event.
 
 ## Conventions
 

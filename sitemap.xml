@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- EDIT: add a <url> when you add a page, and set that page's <lastmod> to the date you changed it.
+     A lastmod that is wrong is worse than no lastmod at all, so only touch the dates of pages that
+     actually changed in the same commit. Pushing this file also triggers the IndexNow workflow,
+     which submits every URL below to Bing. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://turquoisedot.org/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/sponsors/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/events/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/events/2025-12-kickoff/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://turquoisedot.org/privacy/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://turquoisedot.org/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/about/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/team/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/faq/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/events/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/events/2025-12-kickoff/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/sponsors/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/tr/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://turquoisedot.org/privacy/</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>

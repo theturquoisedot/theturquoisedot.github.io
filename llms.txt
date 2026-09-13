@@ -17,9 +17,24 @@
 - Event #2, 14 May 2026, Illinois ARCS at CREATE Tower: Cybersecurity and AI, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore. https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/
 - Event #3, 23 September 2026, Infuse Theatre, Fusionopolis (venue hosted by A*STAR): Robotics and Embodied AI, with speakers from A*STAR, dConstruct Robotics, and OmniVision. https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/
 
+## Common questions
+
+- Is it only for Turkish people? No. Events are open to everyone.
+- Do I need to speak Turkish? No. All talks and Q&A are in English.
+- Is it free? Yes, every event, including refreshments. There is no membership fee.
+- How often? Roughly every quarter, about four a year.
+- Where? Venues rotate across Singapore: universities, research institutes, startup offices.
+- How do I register? Through Luma at https://luma.com/TurquoiseDot
+- Full answers: https://turquoisedot.org/faq/
+
 ## Pages
 
 - [Home](https://turquoisedot.org/): what the community does, next event, core members, contact.
+- [About](https://turquoisedot.org/about/): why the community exists, how a deep dive works, how it is run.
 - [Events](https://turquoisedot.org/events/): every event with programme, speakers, and photos.
+- [Core team](https://turquoisedot.org/team/): the volunteers who run the community.
+- [Common questions](https://turquoisedot.org/faq/): who it is for, what it costs, how to take part.
+- [Türkçe](https://turquoisedot.org/tr/): a summary of the same facts in Turkish.
 - [Sponsors](https://turquoisedot.org/sponsors/): partnership options for 2027 and an interest form.
 - [Privacy notice](https://turquoisedot.org/privacy/): what is collected and why.
+- [Atom feed](https://turquoisedot.org/feed.xml): events and recaps.

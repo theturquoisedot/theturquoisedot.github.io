@@ -7,6 +7,9 @@
 <meta name="description" content="The Turquoise Dot is Singapore's Turkish and Turkic tech and research community: quarterly deep-tech conversations at rotating venues, bridging Türkiye and Singapore.">
 
 <link rel="canonical" href="https://turquoisedot.org/">
+<link rel="alternate" hreflang="en" href="https://turquoisedot.org/">
+<link rel="alternate" hreflang="tr" href="https://turquoisedot.org/tr/">
+<link rel="alternate" hreflang="x-default" href="https://turquoisedot.org/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Turquoise Dot">
@@ -20,6 +23,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="The Turquoise Dot" href="/feed.xml">
 <meta name="theme-color" content="#F3F6F4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131A1C" media="(prefers-color-scheme: dark)">
 
@@ -41,6 +45,7 @@
   "logo": "https://turquoisedot.org/assets/icon-512.png",
   "image": "https://turquoisedot.org/assets/og-image.jpg",
   "email": "turquoisedotsg@gmail.com",
+  "slogan": "Two nodes, one corridor: Türkiye and Singapore, connected through deep tech.",
   "foundingDate": "2025-12",
   "foundingLocation": {
     "@type": "Place",
@@ -129,6 +134,44 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://turquoisedot.org/#website",
+  "url": "https://turquoisedot.org/",
+  "name": "The Turquoise Dot",
+  "description": "Singapore's Turkish and Turkic tech and research community.",
+  "inLanguage": [
+    "en",
+    "tr"
+  ],
+  "publisher": {
+    "@id": "https://turquoisedot.org/#organization"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://turquoisedot.org/#webpage",
+  "url": "https://turquoisedot.org/",
+  "name": "The Turquoise Dot",
+  "inLanguage": "en",
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-09-13",
+  "isPartOf": {
+    "@id": "https://turquoisedot.org/#website"
+  },
+  "about": {
+    "@id": "https://turquoisedot.org/#organization"
+  },
+  "primaryImageOfPage": "https://turquoisedot.org/assets/og-image.jpg"
+}
+</script>
 </head>
 <body>
 
@@ -150,11 +193,11 @@
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="#about">What we do</a>
-      <a href="#events">Events</a>
-      <a href="#team">Team</a>
+      <a href="/about/">About</a>
+      <a href="/events/">Events</a>
+      <a href="/faq/">FAQ</a>
       <a href="/sponsors/">Sponsors</a>
-      <a href="#contact">Contact</a>
+      <a href="/tr/" lang="tr" hreflang="tr">Türkçe</a>
       <a class="cta" href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Next event ↗</a>
     </div>
   </div>
@@ -210,6 +253,35 @@
           <li><b>Dr Cihan Acar</b><span>Senior Research Scientist, A*STAR</span><i>Main talk: the research behind embodied AI</i></li>
           <li><b>Garen Haddeler</b><span>Robotics Engineer, dConstruct Robotics</span><i>Lightning talk: robots working in the field</i></li>
           <li><b>Altar Koca</b><span>Design Engineer, OmniVision</span><i>Main talk: the sensors that let machines see</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BETWEEN DEEP DIVES: the mirror of the SPOTLIGHT above. It starts hidden and reveals itself the
+     moment the spotlight expires, so the page is never left without something forward-looking.
+     EDIT: when the next event is announced, update the SPOTLIGHT and both data-until values, and set
+     this block's data-after to the same moment. The standing wording below needs no editing. -->
+<div class="between" data-after="2026-09-23T20:30:00+08:00" hidden>
+  <div class="wrap">
+    <div class="between-inner">
+      <div>
+        <span class="kicker">Between deep dives</span>
+        <h2>The next one is in planning</h2>
+        <p>We run a deep dive roughly every quarter, each on a single topic, at a different venue across Singapore: universities, research institutes, startup offices. Dates are announced on <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn</a> first, then opened for registration on Luma. Attendance is always free.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Get notified on Luma ↗</a>
+          <a class="btn btn-ghost" href="/events/">Read past deep dives →</a>
+        </div>
+      </div>
+      <div class="between-side">
+        <p class="side-label">While you wait</p>
+        <ul>
+          <li><a href="/events/2026-09-robotics-and-embodied-ai/">Robotics and Embodied AI, September 2026</a></li>
+          <li><a href="/events/2026-05-cybersecurity-and-ai/">Cybersecurity and AI, May 2026</a></li>
+          <li><a href="/faq/">Common questions about the community</a></li>
+          <li><a href="mailto:turquoisedotsg@gmail.com?subject=The%20Turquoise%20Dot%3A%20speaking%20or%20hosting">Propose a talk or a venue</a></li>
         </ul>
       </div>
     </div>
@@ -411,12 +483,17 @@
   <div class="wrap foot">
     <div>© 2026 The Turquoise Dot · Singapore</div>
     <div class="foot-links">
+      <a href="/about/">About</a>
       <a href="/events/">Events</a>
+      <a href="/team/">Team</a>
+      <a href="/faq/">FAQ</a>
       <a href="/sponsors/">Sponsors</a>
+      <a href="/tr/" lang="tr" hreflang="tr">Türkçe</a>
       <a href="https://www.linkedin.com/company/turquoisedot" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://x.com/theturquoisedot" target="_blank" rel="noopener">X</a>
       <a href="https://luma.com/TurquoiseDot" target="_blank" rel="noopener">Luma</a>
       <a href="mailto:turquoisedotsg@gmail.com">Email</a>
+      <a href="/feed.xml">Feed</a>
       <a href="/privacy/">Privacy</a>
     </div>
     <div class="tag">Two nodes, one corridor: <em>Türkiye ↔ Singapore</em>, connected through deep tech.</div>

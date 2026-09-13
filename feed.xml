@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EDIT: after each event, add a new <entry> at the top (newest first), update <updated> at the
+     feed level to the same date, and keep the six most recent entries. Every <id> must be unique
+     and must never change once published. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The Turquoise Dot</title>
+  <subtitle>Singapore's Turkish and Turkic tech and research community</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://turquoisedot.org/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://turquoisedot.org/"/>
+  <id>https://turquoisedot.org/</id>
+  <updated>2026-09-13T00:00:00+08:00</updated>
+  <icon>https://turquoisedot.org/assets/favicon-32.png</icon>
+  <logo>https://turquoisedot.org/assets/icon-512.png</logo>
+  <rights>© 2026 The Turquoise Dot</rights>
+  <author>
+    <name>The Turquoise Dot</name>
+    <email>turquoisedotsg@gmail.com</email>
+    <uri>https://turquoisedot.org/</uri>
+  </author>
+
+  <entry>
+    <title>Robotics and Embodied AI, 23 September 2026</title>
+    <link rel="alternate" type="text/html" href="https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/"/>
+    <id>https://turquoisedot.org/events/2026-09-robotics-and-embodied-ai/</id>
+    <published>2026-09-05T00:00:00+08:00</published>
+    <updated>2026-09-13T00:00:00+08:00</updated>
+    <category term="event"/>
+    <summary type="text">Event #3. A night where robots leave the lab: the research behind embodied AI, robots already working in the field, and the sensors that let machines see. Infuse Theatre, Level 14, Connexis South Tower, Fusionopolis One, with the venue hosted by A*STAR. Speakers: Dr Cihan Acar (A*STAR), Garen Haddeler (dConstruct Robotics), Altar Koca (OmniVision). Free to attend, registration on Luma.</summary>
+  </entry>
+
+  <entry>
+    <title>Cybersecurity and AI, 14 May 2026</title>
+    <link rel="alternate" type="text/html" href="https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/"/>
+    <id>https://turquoisedot.org/events/2026-05-cybersecurity-and-ai/</id>
+    <published>2026-05-14T00:00:00+08:00</published>
+    <updated>2026-09-13T00:00:00+08:00</updated>
+    <category term="event"/>
+    <summary type="text">Event #2. One threat, two perspectives: academic security research meets industry reality at Illinois ARCS, CREATE Tower, with opening remarks by H.E. Sadık Arslan, Ambassador of Türkiye to Singapore. Recap, photographs, and a clip of the opening remarks.</summary>
+  </entry>
+
+  <entry>
+    <title>Community Kickoff and Insights from GRIP, 12 December 2025</title>
+    <link rel="alternate" type="text/html" href="https://turquoisedot.org/events/2025-12-kickoff/"/>
+    <id>https://turquoisedot.org/events/2025-12-kickoff/</id>
+    <published>2025-12-12T00:00:00+08:00</published>
+    <updated>2026-09-13T00:00:00+08:00</updated>
+    <category term="event"/>
+    <summary type="text">Event #1. The sold-out first evening of the community at SMU Connexion, hosted by the SMU Institute of Innovation and Entrepreneurship: a wearable-device field report from Dyson, a MedTech project on dementia, and the plans for 2026. 50 seats, all taken.</summary>
+  </entry>
+
+</feed>
