@@ -286,6 +286,8 @@ section{padding:80px 0}
 
 /* ---------- get involved ---------- */
 .involve{background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.sec-head .btns{margin-top:22px}
+.involve .side-label{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--turq);margin-bottom:14px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px}
 .tile{border-top:2px solid var(--rule-2);padding-top:18px}
 .tile h3{font-size:1.3rem;margin-bottom:8px}
