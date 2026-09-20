@@ -105,7 +105,8 @@ img{max-width:100%;display:block}
 /* ---------- masthead ---------- */
 nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
 .nav-inner{display:flex;align-items:center;justify-content:flex-start;gap:16px;padding:14px 28px;max-width:1120px;margin:0 auto}
-.brand{font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--head);white-space:nowrap;letter-spacing:-.01em}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--head);white-space:nowrap;letter-spacing:-.01em}
+.brand::before{content:"";flex:none;width:18px;height:18px;background:var(--glyph) no-repeat center/18px 18px}
 .brand:hover{text-decoration:none}
 .nav-links{display:flex;gap:24px;align-items:center;flex-wrap:wrap;font-size:.95rem}
 .nav-links a{color:var(--ink-2);font-weight:500}
@@ -120,11 +121,14 @@ nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px s
 .brand{order:1}
 
 /* ---------- kilim band ---------- */
-.kilim{height:24px;background-image:var(--band);background-repeat:repeat-x;background-position:center;background-size:48px 24px;border-bottom:1px solid var(--rule)}
+/* background-repeat:round rescales the tile so a whole number of motifs always fits the viewport,
+   and the origin is pinned left so the run starts on a tile boundary. With repeat-x from centre the band
+   was cut mid-diamond at both ends on most widths. */
+.kilim{height:24px;background-image:var(--band);background-repeat:round no-repeat;background-position:left center;background-size:48px 24px;border-bottom:1px solid var(--rule)}
 
 /* ---------- hero ---------- */
 .hero{border-bottom:1px solid var(--rule)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-block:72px 64px}
 .eyebrow{font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.02em;color:var(--turq);margin-bottom:22px}
 .eyebrow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:9px;vertical-align:1px}
 .hero h1{font-size:clamp(2.7rem,5.6vw,4.2rem);font-weight:600;margin-bottom:22px;letter-spacing:-.02em}
@@ -147,6 +151,8 @@ nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px s
 .crumbs a{color:var(--muted)}
 .page-head h1{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:600;margin:10px 0 18px;letter-spacing:-.02em}
 .page-head .lede{margin-bottom:22px}
+.head-mark{float:right;width:128px;height:128px;margin:2px 0 22px 36px}
+@media (max-width:720px){.head-mark{width:88px;height:88px;margin:0 0 16px 20px}}
 .meta-list{display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--ink-2);font-size:.93rem;margin-bottom:24px}
 .meta-list b{color:var(--head);font-weight:600}
 
@@ -321,7 +327,9 @@ section{padding:80px 0}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--rule);background:var(--paper-2);padding:36px 0 44px;color:var(--muted);font-size:.86rem}
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.foot{display:flex;justify-content:flex-start;gap:16px;flex-wrap:wrap;align-items:center}
+.foot-mark{flex:none;width:64px;height:64px}
+.foot-copy{margin-right:auto}
 .foot-links{display:flex;gap:18px;flex-wrap:wrap}
 .foot-links a{color:var(--ink-2)}
 footer .tag{color:var(--ink-2);width:100%;margin-top:14px;font-family:var(--serif);font-style:italic;font-size:1.05rem}
@@ -356,7 +364,7 @@ footer .tag em{color:var(--head);font-style:italic}
   .annc .sub{display:none}
 }
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:36px;padding:52px 0 44px}
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-block:52px 44px}
   .hero-art{max-width:600px}
   .spot{grid-template-columns:1fr;padding:26px 24px}
   .stats-grid{grid-template-columns:1fr 1fr}
